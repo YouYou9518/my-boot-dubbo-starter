@@ -21,8 +21,6 @@ public class User implements Serializable {
     @NotNull(message = "名字不能为空！")
     private String name;
 
-//    @NotBlank(message = "手机号码不能为空！")
-//    @NotNull(message = "电话号码不能为空！")
     @PhoneNum
     private String phoneNum;
 

@@ -13,13 +13,14 @@ import java.lang.annotation.*;
  */
 
 @ConstraintComposition(CompositionType.AND)
-@Length(min = 11, max = 11, message = "手机号码必须为11位！")
+//@NotBlank(message = "电话号码不能为空")
+//@Length(min = 11, max = 11, message = "手机号码必须为11位！")
 @Target({ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = PhoneNumValidator.class)
 @Documented
 public @interface PhoneNum {
-    String message() default "用户号码输入错误！";
+    String message() default "电话号码格式错误";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
